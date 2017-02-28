@@ -18,7 +18,6 @@ var connection = mysql.createConnection ({
 
 //============== FUNCTIONS ======================= //
 
-
 function start (){
 	connection.query("SELECT * FROM products", function(err, res){
 		// console.log(res[0].dept_name)
@@ -58,7 +57,6 @@ function handleAns(ans){
 			var stock = res[0].stock_quantity
 			var updateAmt = stock - units
 			
-
 			if(units <= stock){
 				updateOrder(units, updateAmt, item)
 
